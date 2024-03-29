@@ -9,22 +9,22 @@
     </head>
     <body class="body-state1">
         <div class="left">
-            <div class="state1" id = "state1">
+            <div class="interface state1" id = "state1">
                 <h1>JS ROCKET LAUNCH!</h1>
                 <a href="#" class="button" onclick="changeState(2)">Launch</a>
             </div>
-            <div class="state2" id = "state2">
+            <div class="interface state2" id = "state2">
                 <h1 id ="countDown">10</h1>
                 <a href="#" class="button" onclick="changeState(1)">Abort!</a>
             </div>
-            <div class="state3" id = "state3">
+            <div class="interface state3" id = "state3">
                 <h1>Lift off!</h1>
             </div>
-            <div class="state4" id = "state4">
+            <div class="interface state4" id = "state4">
                 <h1>WELL DONE!</h1>
                 <a href="#" class="button" onclick="changeState(1)">Do it Again</a>
             </div>
-            <div class="state5" id = "state5">
+            <div class="interface state5" id = "state5">
                 <h1>OH NO!</h1>
                 <a href="#" class="button" onclick="changeState(1)">Try Again!</a>
             </div>
@@ -32,11 +32,13 @@
         </div>
         <div class="right">
             <div id = "rocketID" class="rocket">
-                <h1>do</h1>
+                
             </div>
             <div class="ground">
-                <h1>grass</h1>
+                <h1></h1>
             </div>
+            <div class = "nervous" id ="nervous"></div>
+            <div class= "cantWait" id ="cantWait"></div>
         </div>  
     </body>
     </html>

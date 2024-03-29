@@ -1,15 +1,54 @@
+body{
+    font-family: 'helvetica','arial', sans-serif;
+    background: url('../img/space.jpg');
+}
+
 
 .left{
-    background-color: rgb(57, 184, 223);
+    
+    background: url('../img/doodle.jpg');
     position: fixed;
     width: 50%;
     height: 100%;
     top:0;
-    left:0;
+    left:0; 
+    margin-top: ;
+      
+    
 }
 
+.interface{
+    background-color: bisque;
+    margin-top: 45%;
+    margin-left: 25%;
+    text-align: center;
+    padding: 30px;
+    display: inline-block;
+    width: 400px;
+    border-radius: 30px;
+    
+   
+}
+
+a.button{
+    
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 2000;
+}
+
+a:hover{
+    background-color: rgb(150, 255, 22);
+}
+
+
 .right{
-    background-color: rgb(76, 57, 223);
+    
     position:fixed;
     width: 50%;
     height: 100%;
@@ -18,34 +57,85 @@
 }
 
 .rocket{
+    background:url('../img/rocket-state1.png')no-repeat 0 0;
     position: absolute;
-    background-color: rgb(0, 245, 57);
-    bottom: 20px;
+    bottom: -10px;
     left: 50%;
-    height: 150px;
-    transition:10000ms;
+    width: 143px;
+    height: 272px;
+    margin-left: -71.5px;
+    transition: bottom 10000ms;
     
 }
 
 .body-state1 .rocket{
+    
     transition: none;
 }
 
+.body-state2 .rocket{
+    background-image:url('../img/rocket-state2.gif');
+}
 
 .body-state3 .rocket,
 .body-state4 .rocket{
-    background-color: rgb(255, 17, 0);  
+    background-image:url('../img/rocket-state3.gif');
+}
+
+.body-state5 .rocket{
+    background-image:url('../img/boom.png');
+    width: 209px;
+    height: 200px;
+    margin-left: -104.5px;
+    
+}
+
+
+
+.body-state3 .rocket,
+.body-state4 .rocket{ 
     bottom: 1000px;
     
 }
 
 .ground{
+    background: url('../img/ground.png')no-repeat center center;
     position: absolute;
-    background-color: green;
     bottom: 0;
     width: 100%;
-    height: 20px;
+    height: 50px;
 }
+
+.nervous{
+    
+    background: url('../img/nervous.png')no-repeat 0 0;
+    position:  absolute;
+    width :100%;
+    height: 150px;
+    bottom:220px;
+    left: 50%;
+    margin-left: -180px;
+    display: none;
+}
+
+.nervous.show{
+    display: block;
+}
+
+.cantWait{
+    background: url('../img/cant-wait.png')no-repeat 0 0;
+    position:  absolute;
+    width :100%;
+    height: 70px;
+    bottom:220px;
+    left: 50%;
+    display: none; 
+}
+
+.cantWait.show{
+    display: block;
+}
+
 /*for graphic
 ========================== */
 .state1,.state2,.state3,.state4,.state5{

@@ -9,20 +9,45 @@ var changeState = function(state){
     clearInterval(timer);
     if(state == 2){
         timer = setInterval(function(){
+           
             coutdownNumber = coutdownNumber - 1;
             document.getElementById('countDown').innerHTML = coutdownNumber;
+            
+            if ( coutdownNumber > 5 && coutdownNumber <= 8 ){
+                //be nervous
+                document.getElementById('nervous').className = 'nervous show';
+            }
+
+            else{
+                document.getElementById('nervous').className = 'nervous';
+            }
+
+            if ( coutdownNumber > 1 && coutdownNumber <= 5 ){
+                //can't wait
+                document.getElementById('cantWait').className = 'cantWait show';
+            }
+
+            else{
+                document.getElementById('cantWait').className = 'cantWait';
+            }
+
             if ( coutdownNumber <= 0 ){
                 changeState(3);
+                document.getElementById('nervous').className = 'nervous';
+                document.getElementById('cantWait').className = 'cantWait';
             };
+            
         }, 300 );
     }
     else if (state == 3){
         var success = setTimeout(function(){
             var randomNumber = Math.round(Math.random()*10);
-            if (randomNumber > 6){
+            if (randomNumber > 5){
+               
                 changeState(4);
             }
             else{
+                
                 changeState(5);
             }
         },2000);
@@ -30,8 +55,6 @@ var changeState = function(state){
 } ;
 
     
-
-
 
 
 
